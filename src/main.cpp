@@ -1,10 +1,8 @@
 #include <SPI.H>
 #include <WiFi101.h>
+#include <lib/secret.h>
 
 // WiFi credentials, using the secret.h file.
-
-char ssid[] = ""; // This is the name or ID of the connection used to connect the Board. (Note for the fair sciente - If you are unable to connect to the school internet, use your mobile data.)
-char pass[] = "";
 
 int status = WL_IDLE_STATUS;
 
@@ -26,10 +24,10 @@ void setup()
    while (status != WL_CONNECTED)
    {
       Serial.print("Attempting to connect to the Network/SSID:");
-      Serial.println(ssid);
+      Serial.println(WIFI_SSID);
 
       // Connect to the desired network
-      status = WiFi.begin(ssid, pass);
+      status = WiFi.begin(WIFI_SSID, WIFI_PASSWORD);
 
       delay(5000); // Wait 5 seconds before retrying
    }

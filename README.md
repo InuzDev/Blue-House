@@ -17,3 +17,15 @@ There is a file in lib, is `secret.h`. By obvious reasons I won't be sharing min
 
 #endif
 ```
+
+As I'm using visual studio code as my text editor, plus with PlatoformIO, I can configure the includePath easily with the C/CPP plugin. 
+
+Depending on your configurations and installations, the settings of the plugin should look like this (usually configured automatically by PlatformIO when you start a project)
+
+```shell
+"c:/Users/{user_username}/Desktop/{Project-name-or-directory/include"
+"c:/Users/{user_username}/Desktop/{Project-name-or-directory/lib"
+"c:/Users/{user_username}/Desktop/{Project-name-or-directory/src"
+```
+
+I have my project located in the Desktop, but you can have it anywhere you want or need.

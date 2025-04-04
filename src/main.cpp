@@ -1,6 +1,6 @@
 #include <SPI.H>
 #include <WiFi101.h>
-#include <lib/secret.h>
+#include "lib/secret.h"
 
 // WiFi credentials, using the secret.h file.
 

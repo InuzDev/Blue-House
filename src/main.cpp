@@ -8,6 +8,8 @@ char pass[] = "";
 
 int status = WL_IDLE_STATUS;
 
+void printWiFiStatus();
+
 void setup()
 {
    // This code run onces
@@ -34,6 +36,11 @@ void setup()
 
    Serial.println("Connected to WiFi!"); // Print this if the connectio is succesful
    printWiFiStatus();
+}
+
+void loop()
+{
+   // Code that keep running
 }
 
 void printWiFiStatus()

@@ -1,4 +1,5 @@
 #include <SPI.H>
+#include <Arduino.h>
 #include <WiFi101.h>
 #include "lib/secret.h"
 
@@ -17,7 +18,8 @@ void setup()
    {
       Serial.println("WiFi module not present");
       while (true)
-         ; // halt
+      {
+      } // halt
    }
 
    // Else, if there is a shield, attempt to connect to Wi-Fi network

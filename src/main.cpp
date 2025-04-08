@@ -1,9 +1,13 @@
 #include <SPI.H>
 #include <Arduino.h>
 #include <WiFi101.h>
-#include "lib/secret.h"
+#include <ArduinoHttpClient.h>
+#include <include/secret.h>
 
 // WiFi credentials, using the secret.h file.
+
+WiFiClient wifi;
+HttpClient client = HttpClient(wifi, SERVER_ADDRESS, BACKEND_PORT);
 
 int status = WL_IDLE_STATUS;
 
@@ -40,7 +44,23 @@ void setup()
 
 void loop()
 {
-   // Code that keep running
+   // Code that keeps running
+   String contentType = ""; // Json File that contain the sensors data
+   String postData = "{\"Current sensor\":\"Voltage Sensor\",\"value\":23.5}";
+
+   client.post("/data", contentType, postData);
+   int statusCode = client.responseStatusCode();
+   String response = client.responseBody();
+
+   // Print the status code of the response
+   Serial.print("Status code: ");
+   Serial.println(statusCode);
+
+   // Print the response
+   Serial.print("Response: ");
+   Serial.println(response);
+
+   delay(12000); // Delay the logger for 12 seconds. That means delay will share the status code and the response every 12 seconds
 }
 
 void printWiFiStatus()

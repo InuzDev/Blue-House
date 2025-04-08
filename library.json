@@ -1,0 +1,12 @@
+{
+   "name": "BlueHouse",
+   "version": "0.0.4",
+   "build": {
+      "includeDir": "./lib",
+      "flags": [
+         "-I include",
+         "-I extra",
+         "-I drivers"
+      ]
+   }
+}

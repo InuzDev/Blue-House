@@ -12,4 +12,4 @@
 #  of lib is private dependencies for main.cpp, 
 #  that means it contains sensitive data that 
 #  it can't be shared
-lib/*.h
+include/secret.h

@@ -60,14 +60,15 @@ void loop()
    Serial.print("Status code: ");
 
    // Check if there was an error and print a readable message.
-   if (statusCode == -2)
+   if (statusCode != 200 && statusCode != 201)
    {
       Serial.print("Connection failed, error code: ");
       Serial.print(statusCode);
-      Serial.println(", Retrying in 12 seconds\n");
+      Serial.println(", Retrying in 30 seconds\n");
    }
    else
    {
+      Serial.print("Connection Successful, ");
       Serial.println(statusCode);
    }
 

@@ -2,7 +2,7 @@
 #include <Arduino.h>
 #include <WiFi101.h>
 #include <ArduinoHttpClient.h>
-#include <include/secret.h>
+#include <secret.h>
 
 // WiFi credentials, using the secret.h file.
 

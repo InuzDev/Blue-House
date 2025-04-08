@@ -12,4 +12,9 @@
 #  of lib is private dependencies for main.cpp, 
 #  that means it contains sensitive data that 
 #  it can't be shared
-include/secret.h
+
+# Because platformIO decided not to include the path of lib/* I had to forcelly hide the secret.h file.
+# I include a example file updated with all the variables, just rename it to secret.h
+
+IOT/include/secret.h
+lib/*

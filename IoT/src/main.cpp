@@ -4,7 +4,7 @@
 #include <ArduinoHttpClient.h>
 #include <secret.h>
 
-// WiFi credentials, using the secret.h file.
+// WiFi credentials, are located in secret.h which is in the "include/*" directory
 
 WiFiClient wifi;
 HttpClient client = HttpClient(wifi, SERVER_ADDRESS, BACKEND_PORT);
@@ -45,7 +45,7 @@ void setup()
 void loop()
 {
    // Code that keeps running
-   String contentType = ""; // Json File that contain the sensors data
+   String contentType = "application/json"; // Json File that contain the sensors data
    String postData = "{\"Current sensor\":\"Voltage Sensor\",\"value\":23.5}";
 
    client.post("/data", contentType, postData);
@@ -60,7 +60,7 @@ void loop()
    Serial.print("Response: ");
    Serial.println(response);
 
-   delay(12000); // Delay the logger for 12 seconds. That means delay will share the status code and the response every 12 seconds
+   delay(12000); // Delay the logger for 12 seconds.
 }
 
 void printWiFiStatus()

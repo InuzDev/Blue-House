@@ -12,8 +12,10 @@ There is a file in lib, is `secret.h`. By obvious reasons I won't be sharing min
 #ifndef SECRETS_H
 #define SECRETS_H
 
-#define WIFI_SSID "" // Network name here
-#define WIFI_PASSWORD "" // Network password here
+#define SERVER_ADDRESS "" // Server address here
+#define BACKEND_PORT 8000 // Backend port here
+#define WIFI_SSID ""      // Network name here
+#define WIFI_PASSWORD ""  // Network password here
 
 #endif
 ```

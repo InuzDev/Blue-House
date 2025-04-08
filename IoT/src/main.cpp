@@ -46,7 +46,7 @@ void loop()
 {
    // Code that keeps running
    String contentType = "application/json"; // Json File that contain the sensors data
-   String postData = "{\"Current sensor\":\"Voltage Sensor\",\"value\":23.5}";
+   String postData = "{\"sensorType\":\"Voltage Sensor\",\"value\":23.5}";
 
    client.post("/data", contentType, postData);
    int statusCode = client.responseStatusCode();

@@ -4,7 +4,7 @@ import { Document } from 'mongoose';
 @Schema()
 export class Data extends Document {
    @Prop()
-   sensor: string;
+   SensorType: string;
 
    @Prop()
    value: number;

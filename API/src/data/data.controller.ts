@@ -6,7 +6,7 @@ export class DataController {
    constructor(private readonly dataService: DataService) { }
 
    @Post()
-   async create(@Body() createDataDto: { sensor: string; value: number }) {
+   async create(@Body() createDataDto: { SensorType: string; value: number }) {
       return this.dataService.create(createDataDto);
    }
 

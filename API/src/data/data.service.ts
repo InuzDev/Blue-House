@@ -7,7 +7,7 @@ import { Data } from './data.schema';
 export class DataService {
    constructor(@InjectModel(Data.name) private dataModel: Model<Data>) { }
 
-   async create(createDataDto: { sensor: string; value: number }): Promise<Data> {
+   async create(createDataDto: { SensorType: string; value: number }): Promise<Data> {
       const createdData = new this.dataModel(createDataDto);
       return createdData.save();
    }

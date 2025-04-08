@@ -75,7 +75,7 @@ void loop()
    Serial.print("Response: ");
    Serial.println(response);
 
-   delay(12000); // Delay the logger for 12 seconds.
+   delay(30000); // Delay the logger for 30 seconds.
 }
 
 void printWiFiStatus()

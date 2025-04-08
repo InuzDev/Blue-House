@@ -10,6 +10,14 @@ export class DataController {
       return this.dataService.create(createDataDto);
    }
 
+   @Post()
+   async receiveArduinoData(@Body() sensorData: any) {
+      console.log('Received data from microcontroller', sensorData);
+
+      // Will now recive the data from the microcontroller.
+      return this.dataService.processSensorData(sensorData)
+   }
+
    @Get()
    async findAll() {
       return this.dataService.findAll();

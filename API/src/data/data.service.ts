@@ -12,7 +12,19 @@ export class DataService {
       return createdData.save();
    }
 
+   async processSensorData(sensorData: any) {
+      // Process the incoming sensor data
+      // Example: store in database, trigger alerts, etc.
+
+      return {
+         message: 'Data received successfully',
+         timestamp: new Date().toISOString(),
+         data: sensorData
+      }
+   }
+
    async findAll(): Promise<Data[]> {
       return this.dataModel.find().exec();
    }
 }
+

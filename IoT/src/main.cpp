@@ -27,8 +27,8 @@ const int ADE7753_CS_PIN = 6;    // Chip select pin
 const int ADE7753_RESET_PIN = 7; // Reset pin
 
 // Calibration constant - adjust these based on calibration
-const float CURRENT_CALIBRATION = 0.85;
-const float VOLTAGE_CALIBRATION = 120.0;
+const float CURRENT_CALIBRATION = 0.84;
+const float VOLTAGE_CALIBRATION = 1.5789;
 const float POWER_CALIBRATION = 0.1;
 
 // Variables for energy monitoring
@@ -124,38 +124,6 @@ void loop()
    }
 
    delay(1000);
-
-   // Code that keeps running
-
-   // client.post("/data", contentType, postData);
-   // int statusCode = client.responseStatusCode();
-   // String response = client.responseBody();
-
-   // // Check to the Server address
-   // Serial.print("\nTrying to connect to: ");
-   // Serial.println(SERVER_ADDRESS);
-
-   // // Print the status code of the response
-   // Serial.print("Status code: ");
-
-   // // Check if there was an error and print a readable message.
-   // if (statusCode != 200 && statusCode != 201)
-   // {
-   //    Serial.print("Connection failed, error code: ");
-   //    Serial.print(statusCode);
-   //    Serial.println(", Retrying in 30 seconds\n");
-   // }
-   // else
-   // {
-   //    Serial.print("Connection Successful, ");
-   //    Serial.println(statusCode);
-   // }
-
-   // // Print the response
-   // Serial.print("Response: ");
-   // Serial.println(response);
-
-   // delay(30000); // Delay the logger for 30 seconds.
 }
 
 // Init ADE7753
@@ -244,7 +212,7 @@ unsigned int readRegister(byte reg)
 {
    digitalWrite(ADE7753_CS_PIN, LOW);         // Select chip
    SPI.transfer(reg);                         // Register address (read operation)
-   delayMicroseconds(10);                     // Small delay
+   delayMicroseconds(1);                      // Small delay
    unsigned int value = SPI.transfer(0) << 8; // Upper byte
    value |= SPI.transfer(0);                  // Lower byte
    digitalWrite(ADE7753_CS_PIN, HIGH);        // Deselect chip

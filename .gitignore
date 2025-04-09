@@ -16,9 +16,7 @@ IoT/.qodo
 # Because platformIO decided not to include the path of lib/* I had to forcelly hide the secret.h file.
 # I include a example file updated with all the variables, just rename it to secret.h
 
+# IoT sensitive files
+
 IoT/include/secret.h
 IoT/lib/*
-
-# Web/mobile application directory
-
-mobile-app/node_modules

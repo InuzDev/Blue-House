@@ -1,7 +1,7 @@
 // app/page.tsx
 'use client';
 
-import EnergyChart from '@/components/EnergyChart';
+// import EnergyChart from '@/components/EnergyChart';
 import GaugeCard from '@/components/GaugeCard';
 import { fetchLatestReading } from '@/lib/api';
 import { useEffect, useState } from 'react';

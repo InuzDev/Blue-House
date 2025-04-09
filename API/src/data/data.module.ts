@@ -1,3 +1,4 @@
+// data.module.ts
 import { Module } from '@nestjs/common';
 import { MongooseModule } from '@nestjs/mongoose';
 import { DataService } from './data.service';

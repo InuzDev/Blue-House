@@ -1,13 +1,28 @@
+// data.schema.ts
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 import { Document } from 'mongoose';
 
-@Schema()
-export class Data extends Document {
-   @Prop()
-   SensorType: string;
+export type DataDocument = Data & Document;
 
-   @Prop()
-   value: number;
+@Schema()
+export class Data {
+   @Prop({ required: true })
+   sensorType: string;
+
+   @Prop({ type: Number, required: false })
+   value?: number;
+
+   @Prop({ type: Number, required: false })
+   voltage?: number;
+
+   @Prop({ type: Number, required: false })
+   current?: number;
+
+   @Prop({ type: Number, required: false })
+   power?: number;
+
+   @Prop({ type: Number, required: false })
+   energy?: number;
 
    @Prop({ default: Date.now })
    timestamp: Date;

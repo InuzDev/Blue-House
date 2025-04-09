@@ -18,3 +18,7 @@ IoT/.qodo
 
 IoT/include/secret.h
 IoT/lib/*
+
+# Web/mobile application directory
+
+mobile-app/node_modules

@@ -6,7 +6,8 @@ import GaugeCard from '@/components/GaugeCard';
 import { fetchLatestReading } from '@/lib/api';
 import { useEffect, useState } from 'react';
 // import { fetchLatestReading, fetchEnergyHistory } from '@/lib/api';
-import { EnergyConsumptionData, Reading } from '@/lib/types';
+// import { EnergyConsumptionData, Reading } from '@/lib/types';
+import { Reading } from '@/lib/types';
 
 export default function Dashboard() {
   const [latestReading, setLatestReading] = useState<Reading | null>(null);

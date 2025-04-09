@@ -10,7 +10,7 @@ import { EnergyConsumptionData, Reading } from '@/lib/types';
 
 export default function Dashboard() {
   const [latestReading, setLatestReading] = useState<Reading | null>(null);
-  const [energyHistory, setEnergyHistory] = useState<EnergyConsumptionData[]>([]);
+  // const [energyHistory, setEnergyHistory] = useState<EnergyConsumptionData[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
 
@@ -82,14 +82,14 @@ export default function Dashboard() {
             />
           </div>
 
-          <div className="bg-white rounded-lg shadow p-6 mb-8">
+          {/* <div className="bg-white rounded-lg shadow p-6 mb-8">
             <h2 className="text-xl font-semibold mb-4">Energy Consumption</h2>
             {energyHistory.length > 0 ? (
               <EnergyChart data={energyHistory} />
             ) : (
               <p className="text-gray-500">No energy consumption data available.</p>
             )}
-          </div>
+          </div> */}
 
           <div className="bg-white rounded-lg shadow p-6">
             <h2 className="text-xl font-semibold mb-4">Latest Reading</h2>

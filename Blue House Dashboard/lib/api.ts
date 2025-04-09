@@ -1,5 +1,6 @@
 // lib/api.ts
-import { EnergyConsumptionData, Reading } from './types';
+// import { EnergyConsumptionData, Reading } from './types';
+import { Reading } from "./types";
 
 // Update this URL to match your Nest.js API endpoint
 const API_URL = 'http://localhost:8000';

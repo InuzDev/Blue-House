@@ -30,7 +30,7 @@ As I'm using visual studio code as my text editor, plus with PlatoformIO, I can 
 
 Depending on your configurations and installations, the settings of the plugin should look like this (usually configured automatically by PlatformIO when you start a project)
 
-```shell
+```json
 "c:/Users/{user_username}/Desktop/{Project-name-or-directory}/include"
 "c:/Users/{user_username}/Desktop/{Project-name-or-directory}/lib"
 "c:/Users/{user_username}/Desktop/{Project-name-or-directory}/src"
@@ -48,9 +48,9 @@ As we work with the project, we need to store the data somewhere. We opted to us
 # We start with the installation of dependencies.
 # Make sure to be in the right directory
 
-npm install
+$ npm install
 # or
-npm i
+$ npm i
 ```
 > My directory is "~\Desktop\Blue House\API"
 
@@ -67,4 +67,43 @@ $ npm run start:dev
 
 # production mode
 $ npm run start:prod
+```
+
+---
+
+# Front-End Development
+
+We decided to make a dashboard to visualize the data from the sensors. so we opted to use Next.Js and connect it with our API.
+
+You can find the folder `Blue House Dashboard`, where the Front-end code is located
+Since Next.Js run in the port 3000, we decided to change the API port to 8000.
+
+We still need to make some changes to the dashboard as some data aren't being read, but the logged data from the sensors are being stored and can be readed from a table.
+
+Remember to change your directory to the dashboard folder.
+
+```shell
+# In case you're in the root (Blue-House) run this command
+
+$ cd "Blue House Dashboard"
+```
+
+After moving to the front-end directory, install the dependencies with:
+
+```shell
+# Bun (Remember, if you're using bun. To add more dependencies you need to use "bun add <dependency name>"
+$ bun i
+
+# NPM
+$ npm install
+# or
+$ npm i
+```
+
+Then, run the default dev script that comes with the creation of a next.js project.
+
+```shell
+# In my Project, turbo is enabled. If you wish, you can disable in your end.
+
+$ npm run dev
 ```
